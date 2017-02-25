@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des Ouvriers</title>
+</head>
+<body>
+	<table>
+		<th>idOuvrier</th>
+		<th>nom</th>
+		<th>prenom</th>
+		<th>tel</th>
+		<th>mail</th>
+		<th>rue</th>
+		
+		<tr th:each="ouvrier : ${ouvrier}">
+			<td th:utext="${ouvrier.idOuvrier}"></td>
+			<td th:utext="${ouvrier.coordonnees.nom}"></td>
+			<td th:utext="${ouvrier.coordonnees.prenom}"></td>
+			<td th:utext="${ouvrier.coordonnees.tel}"></td>
+			<td th:utext="${ouvrier.coordonnees.mail}"></td>
+			<td th:utext="${ouvrier.coordonnees.rue}"></td>
+			
+		</tr>
+	</table>
+</body>
+</html>

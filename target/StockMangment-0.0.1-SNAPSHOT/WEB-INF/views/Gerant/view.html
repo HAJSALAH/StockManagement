@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des Gerants</title>
+</head>
+<body>
+	<table>
+		<th>nom</th>
+		<th>prenom</th>
+		<th>mail</th>
+		<tr th:each="gerant : ${gerant}">
+			<td th:utext="${gerant.coordonnees.nom}"></td>
+			<td th:utext="${gerant.coordonneescoor.prenom}"></td>
+			<td th:utext="${gerant.coordonnees.mail}"></td>
+		</tr>
+	</table>
+</body>
+</html>

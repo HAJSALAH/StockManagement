@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des Fournisseurs</title>
+</head>
+<body>
+	<table>
+		<th>idFournisseur</th>
+		<th>nom</th>
+		<th>tel</th>
+		<th>rue</th>
+		<th>ville</th>
+		<th>codePostal</th>
+		<tr th:each="fournisseur : ${fournisseur}">
+			<td th:utext="${fournisseur.idFournisseur}"></td>
+			<td th:utext="${fournisseur.coordonnees.nom}"></td>
+			<td th:utext="${fournisseur.coordonnees.tel}"></td>
+			<td th:utext="${fournisseur.coordonnees.rue}"></td>
+			<td th:utext="${fournisseur.coordonnees.ville}"></td>
+			<td th:utext="${fournisseur.coordonnees.codePostal}"></td>
+			
+		</tr>
+	</table>
+</body>
+</html>

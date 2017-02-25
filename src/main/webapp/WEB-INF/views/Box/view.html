@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des boxs</title>
+</head>
+<body>
+	<table>
+		<th>idBox</th>
+		<th>rue</th>
+		<th>ville</th>
+		<th>codePostal</th>
+		
+		<tr th:each="box : ${box}">
+			<td th:utext="${box.idBox}"></td>
+			<td th:utext="${box.coordonnees.rue}"></td>
+			<td th:utext="${box.coordonnees.ville}"></td>
+			<td th:utext="${box.coordonnees.codePostal}"></td>
+		</tr>
+	</table>
+</body>
+</html>

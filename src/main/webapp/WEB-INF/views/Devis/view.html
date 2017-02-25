@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des Devis</title>
+</head>
+<body>
+	<table>
+		<th>idDevis</th>
+		<th>rue</th>
+		<th>ville</th>
+		<th>codePostal</th>
+		<th>reference</th>
+		<th>conditionGenerale</th>
+		<th>date</th>
+		
+		<tr th:each="devis : ${devis}">
+			<td th:utext="${devis.idDevis}"></td>
+			<td th:utext="${devis.coordonnees.rue}"></td>
+			<td th:utext="${devis.coordonnees.code_Postal}"></td>
+			<td th:utext="${devis.coordonnees.ville}"></td>
+			<td th:utext="${devis.coordonnees.reference}"></td>
+			<td th:utext="${devis.coordonnees.condition_Generale}"></td>
+			<td th:utext="${devis.date}"></td>
+			
+		</tr>
+	</table>
+</body>
+</html>

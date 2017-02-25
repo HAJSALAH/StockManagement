@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des Materiels</title>
+</head>
+<body>
+	<table>
+		<th>idMateriels</th>
+		<th>nomMateriels</th>
+		<th>codeMateriels</th>
+		<th>reference</th>
+		<tr th:each="materiels : ${materiels}">
+			<td th:utext="${materiels.idMateriels}"></td>
+			<td th:utext="${materiels.nomMateriels}"></td>
+			<td th:utext="${materiels.codeMateriels}"></td>
+			<td th:utext="${materiels.reference}"></td>
+			
+		</tr>
+	</table>
+</body>
+</html>

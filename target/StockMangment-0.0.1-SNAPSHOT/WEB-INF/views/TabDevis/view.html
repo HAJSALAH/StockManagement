@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des TabDevis</title>
+</head>
+<body>
+	<table>
+		<th>idTabDevis</th>
+		<th>Quantite</th>
+		<th>TVA</th>
+		<th>TOTAL</th>
+		<th>TOTAL_TTC</th>
+		<tr th:each="tabDevis : ${tabDevis}">
+			<td th:utext="${tabDevis.idTabDevis}"></td>
+			<td th:utext="${tabDevis.quantite}"></td>
+			<td th:utext="${tabDevis.TVA}"></td>
+			<td th:utext="${tabDevis.total}"></td>
+			<td th:utext="${tabDevis.totalTTC}"></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des coordonnées</title>
+</head>
+<body>
+	<table>
+		<th>nom</th>
+		<th>prenom</th>
+		<th>mail</th>
+		<tr th:each="coordonnees : ${coordonnees}">
+			<td th:utext="${coordonnees.name}"></td>
+			<td th:utext="${coordonnees.prenom}"></td>
+			<td th:utext="${coordonnees.mail}"></td>
+		</tr>
+	</table>
+</body>
+</html>

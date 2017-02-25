@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des Societes</title>
+</head>
+<body>
+	<table>
+		<th>idSociete</th>
+		<th>nom</th>
+		<th>rue</th>
+		<th>ville</th>
+		<th>codePostal</th>
+		<th>tel</th>
+		<th>mail</th>
+		<tr th:each="societe : ${societe}">
+			<td th:utext="${societe.idSociete}"></td>
+			<td th:utext="${societe.coordonnees.rue}"></td>
+			<td th:utext="${societe.coordonnees.ville}"></td>
+			<td th:utext="${societeSoc.coordonnees.codePostal}"></td>
+			<td th:utext="${societe.coordonnees.tel}"></td>
+			<td th:utext="${societe.coordonnees.mail}"></td>
+		</tr>
+	</table>
+</body>
+</html>

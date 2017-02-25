@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Liste des chantiers</title>
+</head>
+<body>
+	<table>
+		<th>idChantier</th>
+		<th>rue</th>
+		<th>ville</th>
+		<th>codepostal</th>
+		<th>tel</th>
+		<tr th:each="chantier : ${chantier}">
+			<td th:utext="${chantier.idChantier}"></td>
+			<td th:utext="${chantier.coordonnees.rue}"></td>
+			<td th:utext="${chantier.coordonnees.ville}"></td>
+			<td th:utext="${chantier.coordonnees.codePostal}"></td>
+			<td th:utext="${chantier.coordonnees.tel}"></td>
+		</tr>
+	</table>
+</body>
+</html>
